@@ -6,7 +6,8 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Table(name="system_member_type")
+// 成员身份类型：本人，家人，同学，朋友，亲戚，老师，校友，房东等
+@Table(name="pfp_config_member_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

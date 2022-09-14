@@ -5,7 +5,8 @@ import com.meta.web.coins.common.BaseEntity;
 import lombok.*;
 import javax.persistence.*;
 
-@Table(name="system_member")
+// 成员对象用于收入，支出，转账，投资，借贷，共用
+@Table(name="pfp_config_member")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -27,5 +28,8 @@ public class Member extends BaseEntity{
 
 	@Column(name="member_type")
 	private String memberType;   // 成员类别
+
+	@Column(name="member_desc")
+	private String memberDesc;   // 成员描述
 
 }
