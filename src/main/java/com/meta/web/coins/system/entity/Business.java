@@ -1,0 +1,53 @@
+package com.meta.web.coins.system.entity;
+
+import com.meta.web.coins.common.BaseEntity;
+import lombok.*;
+
+import javax.persistence.*;
+
+/**
+ * 实体明细（公司，组织，商店，超市，个人，投资公司）
+ * @author shengdaolin_sh
+ * @date 2019年8月18日
+ */
+@Table(name="pfp_config_business")
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Business extends BaseEntity {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="business_id")
+	private Long businessId;           // 实体ID
+	
+	@Column(name="business_name")
+	private String  businessName;       // 实体名称
+
+	@Column(name="business_class")
+	private String  businessClass;      // 公司，组织，商店，超市，个人
+
+	@Column(name="business_type")       // 实体用途（收入，支出，借贷，投资）
+	private String  businessType;
+	
+	@Column(name="business_address")
+	private String  businessAddress;     // 实体所在地址，国家，省市区，街道
+	
+	@Column(name="business_map_location")
+	private String  businessMapLocation; // 实体地图所在点，经纬度
+	
+	@Column(name="business_imgs")
+	private String  businessImgs;        // 实体照片
+	
+	@Column(name="business_desc")
+	private String  businessDesc;        // 实体描述
+	
+
+	
+	
+	
+
+}
