@@ -14,13 +14,13 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * 币种
+ * 币种（英镑，人民币，美元等）
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
 
-@Entity
 @Table(name="pfp_config_money_type")
+@Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Builder

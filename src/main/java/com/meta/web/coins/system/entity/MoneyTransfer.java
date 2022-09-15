@@ -14,35 +14,35 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * 收入方式
+ * 转账方式
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_money_gain")
+@Table(name="pfp_money_transfer")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MoneyGain extends BaseEntity {
+public class MoneyTransfer extends BaseEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="money_gain_id")
-	private Integer moneyGainId;   // 收入方式ID
+	@Column(name="money_transfer_id")
+	private Integer moneyTransferId;   // 收入方式ID
 	
-	@Column(name="money_gain_cname")
-	private String moneyGainCname; // 中文名
+	@Column(name="money_transfer_cname")
+	private String moneyTransferCname; // 中文名
 	
-	@Column(name="money_gain_ename")
-	private String moneyGainEname; // 英文名
+	@Column(name="money_transfer_ename")
+	private String moneyTransferEname; // 英文名
 	
-	@Column(name="money_gain_icon")
-	private String moneyGainIcon;   // 收入方式Icon
+	@Column(name="money_transfer_icon")
+	private String moneyTransferIcon;   // 收入方式Icon
 	
-	@Column(name="money_gain_desc")
-	private String moneyGainDesc;   // 收入方式描述
+	@Column(name="money_transfer_desc")
+	private String moneyTransferDesc;   // 收入方式描述
 	
 
 }

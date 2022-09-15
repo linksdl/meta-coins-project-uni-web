@@ -9,36 +9,35 @@
 package com.meta.web.coins.system.entity;
 
 import com.meta.web.coins.common.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * 支出方式
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-//@Table(name="pfp_money_pay")
-//@Entity
+@Table(name="pfp_money_pay")
+@Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MoneyPay extends BaseEntity {
 
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="money_pay_id")
-	private Integer moneyPayId;   // 支出方式ID
+	private Integer moneyPayId;    // 支出方式ID
 	
 	@Column(name="money_pay_cname")
-	private String moneyPayCname; // 中文名
+	private String moneyPayCname;  // 中文名
 	
 	@Column(name="money_pay_ename")
-	private String moneyPayEname; // 英文名
+	private String moneyPayEname;  // 英文名
 	
 	@Column(name="money_pay_icon")
 	private String moneyPayIcon;   // 支出方式Icon
