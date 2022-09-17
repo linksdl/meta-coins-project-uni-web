@@ -10,24 +10,24 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_book")
+@Table(name="config_book_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserBookType extends BaseEntity {
+public class BookType extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="book_id")
-	private Long bookId;       // 账本Id
+	@Column(name="book_type_id")
+	private Long bookTypeId;         // 账本类型Id
 
-	@Column(name="book_name")
-	private String  bookName;  // 账本名
+	@Column(name="book_type_name")
+	private String  bookTypeName;    // 账本类型名称
 
-	@Column(name="book_desc")
-	private String  bookDesc;  // 账本描述
+	@Column(name="book_type_desc")
+	private String  bookTypeDesc;    // 账本类型描述
 
 }

@@ -7,7 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 
 // 成员身份类型：本人，家人，同学，朋友，亲戚，老师，校友，房东等
-@Table(name="pfp_config_member_type")
+@Table(name="config_member_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -18,13 +18,13 @@ public class MemberType extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="type_id")
-	private Long typeId;       // 身份类型ID
+	@Column(name="member_type_id")
+	private Long memberTypeId;       // 身份类型ID
 
-	@Column(name="type_name")
-	private String typeName;   // 身份类型名称
+	@Column(name="member_type_name")
+	private String memberTypeName;   // 身份类型名称
 
-	@Column(name="type_desc")
-	private String typeDesc;   // 描述
+	@Column(name="member_type_desc")
+	private String memberTypeDesc;   // 身份类型描述
 
 }

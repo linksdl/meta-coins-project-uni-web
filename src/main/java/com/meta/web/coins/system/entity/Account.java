@@ -29,16 +29,14 @@ import java.util.List;
 @AllArgsConstructor
 public class Account extends BaseEntity {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="account_id")
 	private Long accountId;         // 账户ID
-	
+
+	@Column(name="account_parent_id")
+	private Long accountParentId;   // 账户父ID
+
 	@Column(name="account_name")
 	private String  accountName;    // 账户名称
 
@@ -47,22 +45,29 @@ public class Account extends BaseEntity {
 
 	@Column(name="account_class")
 	private String accountClass;    // 账户分类（正 负）
-	
-	@Column(name="parent_id")
-	private Long parentId;          // 父类ID
 
 	@Column(name="account_desc")
 	private String  accountDesc;    // 账户描述
-	
+
+	@Column(name="account_scope")
+    private String accountScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
+
 	@Column(name="account_level")
 	private String  accountLevel;   // 账户层次
-	
+
 	@Column(name="account_sort")
 	private String  accountSort;    // 排序
 
 	/** 下级子账户 */
 	@Transient
     private List<Account> children = new ArrayList<Account>();
-	
+
+	// 关联不同用户和用户不同账本
+	@Column(name="user_id")
+	private String  userId;    	  // 用户ID
+
+	@Column(name="book_id")
+	private Long bookId;         // 账本Id
+
 
 }

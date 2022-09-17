@@ -10,7 +10,7 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2022年9月15日
  */
-@Table(name="pfp_goods_type")
+@Table(name="config_goods_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -23,13 +23,13 @@ public class GoodsType extends BaseEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="good_type_id")
-	private Integer goodTypeId;    // 商品类型ID
+	@Column(name="goods_type_id")
+	private Integer goodsTypeId;    // 商品类型ID
 
-	@Column(name="good_type_name")
-	private String goodTypeName;   // 商品类型名称
+	@Column(name="goods_type_name")
+	private String goodsTypeName;   // 商品类型名称
 
-	@Column(name="good_type_desc")
-	private String goodTypeDesc;   // 商品类型描述
+	@Column(name="goods_type_desc")
+	private String goodsTypeDesc;   // 商品类型描述
 
 }

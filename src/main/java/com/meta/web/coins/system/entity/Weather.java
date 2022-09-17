@@ -44,4 +44,5 @@ public class Weather extends BaseEntity {
 	@Column(name="weather_desc")
 	private String weatherDesc;  // 天气描述
 
+
 }

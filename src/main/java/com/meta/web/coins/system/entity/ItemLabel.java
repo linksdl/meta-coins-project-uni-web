@@ -19,13 +19,12 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_label")
+@Table(name="config_label")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class ItemLabel extends BaseEntity {
 
-	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="label_id")
@@ -42,6 +41,16 @@ public class ItemLabel extends BaseEntity {
 	
 	@Column(name="label_desc")
 	private String  labelDesc;  // 标签描述
+
+	@Column(name="label_scope")
+    private String labelScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
+
+	// 关联不同用户和用户不同账本
+	@Column(name="user_id")
+	private String  userId;    	  // 用户ID
+
+	@Column(name="book_id")
+	private Long bookId;         // 账本Id
 	
 	
 	

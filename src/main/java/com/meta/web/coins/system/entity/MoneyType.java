@@ -14,7 +14,7 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * 币种（英镑，人民币，美元等）
+ * 币种类型（英镑，人民币，美元等）
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
@@ -30,19 +30,16 @@ public class MoneyType extends BaseEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="money_id")
-	private Long moneyId;
+	@Column(name="money_type_id")
+	private Long moneyTypeId;
 	
-	@Column(name="money_cname")
-	private String moneyCname;
+	@Column(name="money_type_cname")
+	private String moneyTypeCname;
 	
-	@Column(name="money_ename")
-	private String moneyEname;
+	@Column(name="money_type_ename")
+	private String moneyTypeEname;
 
-	@Column(name="money_rate")
-	private double moneyRate;
-	
-	@Column(name="money_desc")
-	private String moneyDesc;
+	@Column(name="money_type_desc")
+	private String moneyTypeDesc;
 
 }

@@ -18,18 +18,28 @@ public class Member extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="member_id")
-	private Long memberId;    // 成员ID
+	private Long memberId;        // 成员ID
 
 	@Column(name="member_name")
-	private String memberName;   // 成员名称
+	private String memberName;    // 成员名称
 
 	@Column(name="member_type_id")
-	private Long memberTypeId;   // 成员身份类别ID
+	private String memberTypeId;   // 外键，一对一，成员身份类别ID,
 
 	@Column(name="member_type")
-	private String memberType;   // 成员类别
+	private String memberType;    // 成员类别, "校友，同学"
 
 	@Column(name="member_desc")
-	private String memberDesc;   // 成员描述
+	private String memberDesc;    // 成员描述
+
+	@Column(name="member_scope")
+    private String memberScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
+
+	// 关联不同用户和用户不同账本
+	@Column(name="user_id")
+	private String  userId;    	  // 用户ID
+
+	@Column(name="book_id")
+	private Long bookId;         // 账本Id
 
 }

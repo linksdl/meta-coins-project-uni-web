@@ -10,7 +10,7 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_project")
+@Table(name="config_project")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -32,4 +32,15 @@ public class ItemProject extends BaseEntity {
 
 	@Column(name="project_desc")
 	private String projectDesc;   // 项目描述
+
+	@Column(name="project_scope")
+    private String projectScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
+
+	// 关联不同用户和用户不同账本
+	@Column(name="user_id")
+	private String  userId;    	  // 用户ID
+
+	@Column(name="book_id")
+	private Long bookId;         // 账本Id
+
 }

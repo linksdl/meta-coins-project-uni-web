@@ -14,11 +14,11 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * 心情状况
+ * 心情状况：生气，高兴
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_emotion")
+@Table(name="pfp_config_emotion")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -27,11 +27,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Emotion extends BaseEntity {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="emotion_id")
@@ -48,7 +44,5 @@ public class Emotion extends BaseEntity {
 
 	@Column(name="emotion_desc")
 	private String emotionDesc;  // 心情描述
-	
-	
 
 }

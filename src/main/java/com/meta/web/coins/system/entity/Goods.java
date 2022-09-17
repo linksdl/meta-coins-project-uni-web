@@ -6,11 +6,11 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * 商品
+ * 商品信息表
  * @author shengdaolin_sh
  * @date 2022年9月15日
  */
-@Table(name="pfp_goods")
+@Table(name="config_goods")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -23,25 +23,25 @@ public class Goods extends BaseEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="good_id")
-	private Integer goodId;    // 商品ID
+	@Column(name="goods_id")
+	private Integer goodsId;      // 商品ID
 
-	@Column(name="good_type_id")
-	private String goodTypeId;   // 商品类型ID
+	@Column(name="goods_type_id")
+	private String goodsTypeId;   // 商品类型ID
 
-	@Column(name="good_type_name")
+	@Column(name="goods_type_name")
 	private String goodTypeName; // 商品类型名称
 
-	@Column(name="good_cname")
-	private String goodCname;   // 商品中文名
+	@Column(name="goods_cname")
+	private String goodsCname;   // 商品中文名
 
-	@Column(name="good_ename")
-	private String goodEname;   // 商品英文名
+	@Column(name="goods_ename")
+	private String goodsEname;   // 商品英文名
 
-    @Column(name="good_price")
-    private Double goodPrice;   // 商品价格
+    @Column(name="goods_price")
+    private Double goodsPrice;   // 商品价格
 
-	@Column(name="good_desc")
-	private String goodDesc;    // 商品描述
+	@Column(name="goods_desc")
+	private String goodsDesc;    // 商品描述
 
 }

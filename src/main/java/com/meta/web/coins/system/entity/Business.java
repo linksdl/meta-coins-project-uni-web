@@ -22,15 +22,15 @@ public class Business extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="business_id")
-	private Long businessId;           // 实体ID
+	private Long businessId;            // 实体ID
 	
 	@Column(name="business_name")
 	private String  businessName;       // 实体名称
 
-	@Column(name="business_class")
-	private String  businessClass;      // 公司，组织，商店，超市，个人
+	@Column(name="business_type_id")    // 实体类型：公司ID，组织，商店，超市，个人
+	private String businessTypeId;
 
-	@Column(name="business_type")       // 实体用途（收入，支出，借贷，投资）
+	@Column(name="business_type")       // 实体类型：公司，组织，商店，超市，个人
 	private String  businessType;
 	
 	@Column(name="business_address")
@@ -45,8 +45,15 @@ public class Business extends BaseEntity {
 	@Column(name="business_desc")
 	private String  businessDesc;        // 实体描述
 	
+	@Column(name="business_scope")
+    private String businessScope;   	// 作用范围：全部，支出，收入，借入，借出，转账等
 
-	
+	// 关联不同用户和用户不同账本
+	@Column(name="user_id")
+	private String  userId;    	  		// 用户ID
+
+	@Column(name="book_id")
+	private Long bookId;         		// 账本Id
 	
 	
 

@@ -31,19 +31,18 @@ public class BaseEntity {
     private Date updateTime;
 
     @Column(name="weight")
-    private int weight;
+    private int weight;             // 权重
+
+    @Column(name="order")
+    private int order;              // 排序
 
     @Column(name="icon")
-    private String icon;
+    private String icon;            // 图表
 
     @Column(name="remark")
-    private String remark;
-
-    @Column(name="field_desc")
-    private String fieldDesc;
+    private String remark;          // 备注
 
     @Column(name="enable")
-    private String enable;
-
+    private String enable;          // 是否可用
 
 }
