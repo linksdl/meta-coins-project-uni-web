@@ -33,8 +33,8 @@ public class BaseEntity {
     @Column(name="weight")
     private int weight;             // 权重
 
-    @Column(name="order")
-    private int order;              // 排序
+    @Column(name="order_sort")
+    private int orderSort;          // 排序
 
     @Column(name="icon")
     private String icon;            // 图表
