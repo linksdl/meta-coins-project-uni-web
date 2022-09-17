@@ -18,7 +18,7 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_emotion")
+@Table(name="config_emotion")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

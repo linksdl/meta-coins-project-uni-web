@@ -19,7 +19,7 @@ import javax.persistence.*;
  * @date 2019年8月18日
  */
 
-@Table(name="pfp_config_money_type")
+@Table(name="config_money_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

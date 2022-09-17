@@ -10,7 +10,7 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_business")
+@Table(name="config_business")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

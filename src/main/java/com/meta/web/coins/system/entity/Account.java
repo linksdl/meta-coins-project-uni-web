@@ -20,7 +20,7 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_account")
+@Table(name="config_account")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

@@ -6,7 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 
 // 成员对象用于收入，支出，转账，投资，借贷，共用
-@Table(name="pfp_config_member")
+@Table(name="config_member")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)

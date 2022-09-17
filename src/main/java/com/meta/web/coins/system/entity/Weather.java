@@ -18,7 +18,7 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_config_weather")
+@Table(name="config_weather")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
