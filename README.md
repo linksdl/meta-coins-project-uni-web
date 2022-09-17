@@ -7,3 +7,11 @@
 - sudo chown -RL root:mysql /usr/local/mysql
 - sudo chown -RL mysql:mysql /usr/local/mysql/data
 - sudo /usr/local/mysql/support-files/mysql.server start ｜ stop
+
+
+### redis 启动
+redis-server
+
+
+### RuoYi-Vue3  启动
+yarn dev
