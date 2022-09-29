@@ -40,7 +40,13 @@ public class ItemProject extends BaseEntity {
 	@Column(name="user_id")
 	private String  userId;    	  // 用户ID
 
+	@Column(name="user_name")
+	private String userName;      // 用户名称
+
 	@Column(name="book_id")
 	private Long bookId;         // 账本Id
+
+	@Column(name="book_name")
+	private Long bookName;       // 账本名称
 
 }
