@@ -40,7 +40,7 @@ public class BaseEntity {
     private int weight;             // 权重
 
     @Column(name="enable_status")
-    private int enableStatus;      // 是否可用 0 不可用  1可用
+    private Integer enableStatus;      // 是否可用 0 不可用  1可用
 
     @Column(name="icon")
     private String icon;            // 图标

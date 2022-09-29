@@ -4,6 +4,7 @@ import com.meta.web.coins.common.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * 用户的账本列表
@@ -28,7 +29,7 @@ public class Book extends BaseEntity {
 	private String  bookName;   // 用户账本名
 
 	@Column(name="book_type_id")
-	private String bookTypeId;   // 用户账本类别ID
+	private Long bookTypeId;   // 用户账本类别ID
 
 	@Column(name="book_type")
 	private String bookType;    // 用户账本类别：默认账本, 个人账户
@@ -37,11 +38,12 @@ public class Book extends BaseEntity {
 	private String  bookDesc;   // 用户账本描述
 
 	@Column(name="book_default")
-	private String bookDefault; // 账本是否为默认账本
+	private Integer bookDefault; // 账本是否为默认账本
 
 	@Column(name="user_id")
-	private String  userId;    	// 用户ID
+	private Long  userId;    	// 用户ID
 
-
+	@Column(name="user_name")
+	private String userName;    // 用户名称
 
 }

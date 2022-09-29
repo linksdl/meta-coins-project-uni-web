@@ -28,8 +28,8 @@ public class City extends BaseEntity {
 	@Column(name="city_country")
 	private String cityCountry;  // 城市所在国家
 
-    @Column(name="city_privence")
-	private String cityPrivence; // 城市所在省份，州
+    @Column(name="city_province")
+	private String cityProvince; // 城市所在省份，州
 
 	@Column(name="city_cname")
 	private String cityCname;   // 城市中文名
