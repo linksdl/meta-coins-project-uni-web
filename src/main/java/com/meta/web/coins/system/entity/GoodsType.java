@@ -32,4 +32,5 @@ public class GoodsType extends BaseEntity {
 	@Column(name="goods_type_desc")
 	private String goodsTypeDesc;   // 商品类型描述
 
+
 }

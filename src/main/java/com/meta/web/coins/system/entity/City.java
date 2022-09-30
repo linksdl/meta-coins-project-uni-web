@@ -37,7 +37,6 @@ public class City extends BaseEntity {
 	@Column(name="city_ename")
 	private String cityEname;   // 城市英文名
 
-
 	@Column(name="city_desc")
 	private String cityDesc;    // 城市描述
 }

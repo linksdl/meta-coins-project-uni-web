@@ -43,7 +43,6 @@ public class Book extends BaseEntity {
 	@Column(name="user_id")
 	private Long  userId;    	// 用户ID
 
-
 	@Column(name="user_name")
 	private String userName;    // 用户名称
 

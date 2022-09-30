@@ -50,7 +50,7 @@ public class Account extends BaseEntity {
 	private String  accountDesc;    // 账户描述
 
 	@Column(name="account_scope")
-    private String accountScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
+    private String accountScope;    // 作用范围：全部，支出，收入，借入，借出，转账等
 
 	@Column(name="account_level")
 	private String  accountLevel;   // 账户层次
@@ -64,13 +64,13 @@ public class Account extends BaseEntity {
 
 	// 关联不同用户和用户不同账本
 	@Column(name="user_id")
-	private Long  userId;    	  // 用户ID
+	private Long  userId;    	   // 用户ID
 
 	@Column(name="user_name")
-	private String userName;      // 用户名称
+	private String userName;       // 用户名称
 
 	@Column(name="book_id")
-	private Long bookId;         // 账本Id
+	private Long bookId;           // 账本Id
 
 	@Column(name="book_name")
 	private String bookName;       // 账本名称

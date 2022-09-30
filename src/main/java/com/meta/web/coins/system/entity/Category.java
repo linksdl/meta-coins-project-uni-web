@@ -39,6 +39,9 @@ public class Category extends BaseEntity {
 	@Column(name="category_parent_id")
 	private Long categoryParentId;  // 分类父ID
 
+	@Column(name="category_parent_name")
+	private String categoryParentName;  // 分类父名称
+
 	@Column(name="category_name")
 	private String  categoryName;   // 分类名称
 

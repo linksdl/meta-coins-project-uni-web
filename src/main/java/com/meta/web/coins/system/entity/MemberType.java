@@ -25,7 +25,6 @@ public class MemberType extends BaseEntity{
 	private String memberTypeName;   // 身份类型名称
 
 
-
 	@Column(name="member_type_desc")
 	private String memberTypeDesc;   // 身份类型描述
 

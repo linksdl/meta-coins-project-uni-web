@@ -10,24 +10,24 @@ import javax.persistence.*;
  * @author shengdaolin_sh
  * @date 2022年9月14日
  */
-@Table(name="config_business_type")
+@Table(name="config_enterprise_type")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class BusinessType extends BaseEntity {
+public class EnterpriseType extends BaseEntity {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="business_type_id")
-	private Long businessTypeId;            // 实体类型ID
+	@Column(name="enterprise_type_id")
+	private Long enterpriseTypeId;            // 实体类型ID
 	
-	@Column(name="business_type_name")
-	private String  businessTypeName;       // 实体类型名称,公司，组织，商店，超市，个人
+	@Column(name="enterprise_type_name")
+	private String  enterpriseTypeName;       // 实体类型名称,公司，组织，商店，超市，个人
 	
-	@Column(name="business_type_desc")
-	private String  businessTypeDesc;       // 实体类型描述
+	@Column(name="enterprise_type_desc")
+	private String  enterpriseTypeDesc;       // 实体类型描述
 
 }

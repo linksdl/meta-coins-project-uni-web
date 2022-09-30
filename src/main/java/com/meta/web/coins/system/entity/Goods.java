@@ -27,7 +27,7 @@ public class Goods extends BaseEntity {
 	private Integer goodsId;      // 商品ID
 
 	@Column(name="goods_type_id")
-	private String goodsTypeId;   // 商品类型ID
+	private Long goodsTypeId;   // 商品类型ID
 
 	@Column(name="goods_type_name")
 	private String goodTypeName; // 商品类型名称
@@ -56,5 +56,6 @@ public class Goods extends BaseEntity {
 
 	@Column(name="book_name")
 	private String bookName;       // 账本名称
+
 
 }

@@ -27,7 +27,6 @@ public class BookType extends BaseEntity {
 	@Column(name="book_type_name")
 	private String  bookTypeName;    // 账本类型名称
 
-
 	@Column(name="book_type_desc")
 	private String  bookTypeDesc;    // 账本类型描述
 
