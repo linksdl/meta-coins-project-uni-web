@@ -105,7 +105,7 @@ public class TransferBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="transfer_label_id")
-	private Long transferLabelId;       	    // 转账标签Id
+	private Long transferLabelId;       	  // 转账标签Id
 
 	@Column(name="transfer_label_name")
 	private String transferLabelName;         // 转账标签 工资转账

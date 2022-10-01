@@ -12,13 +12,13 @@ import java.util.List;
  * 资金(账单)流水（收入，支出，借贷，转账，余额，投资等）
  *
  */
-//@Table(name="bill_flow")
-//@Entity
-//@Data
-//@EqualsAndHashCode(callSuper=false)
-//@Builder
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Table(name="bill_flow")
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class FlowBill extends BaseEntity {
 
 

@@ -13,13 +13,13 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-//@Table(name="bill_consume")
-//@Entity
-//@Data
-//@EqualsAndHashCode(callSuper=false)
-//@Builder
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Table(name="bill_consume")
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ConsumeBill extends BaseEntity {
 
 	@Id
