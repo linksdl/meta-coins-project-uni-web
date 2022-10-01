@@ -31,7 +31,7 @@ public class IncomeBill extends BaseEntity {
 	private String incomeName;			   // 收入名称
 
 	@Column(name="income_type")
-	private String incomeType;             // 收入类别：退款，收入，贷款，借款 return income loan borrow
+	private String incomeType;             // 收入类别：退款，收入，贷款，借款 return income loan-in borrow
 
 	@Column(name="income_datetime")
 	private Date incomeDateTime;           // 收入日期时间 2019-10-01 12:00:00
@@ -49,7 +49,7 @@ public class IncomeBill extends BaseEntity {
 	private Long  incomeParentId;
 
 	@Column(name="income_parent_name")    // 收入父名称
-	private Long  incomeParentName;
+	private String  incomeParentName;
 
 	/** 子分类 */
 	@Transient
@@ -57,17 +57,10 @@ public class IncomeBill extends BaseEntity {
 
 	// ------ 关联输入信息 ------ //
 	@Column(name="income_user_id")
-	private Long  incomeUserId;    	  			// 收入用户ID
+	private Long  incomeUserId;    	  		// 收入用户ID
 
 	@Column(name="income_user_name")
-	private String incomeUserName;      			// 收入用户名称
-
-	// ---------------------------
-	@Column(name="income_account_id")
-	private Long incomeAccountId;           // 收入账户 ID
-
-	@Column(name="income_account_name")
-	private String incomeAccountName;       // 收入账户 银行账户>招商银行
+	private String incomeUserName;      	// 收入用户名称
 
 	// ---------------------------
 	@Column(name="income_book_id")
@@ -77,11 +70,18 @@ public class IncomeBill extends BaseEntity {
 	private String incomeBookName;     		// 收入账本名称
 
 	// ---------------------------
+	@Column(name="income_account_id")
+	private Long incomeAccountId;           // 收入账户 ID
+
+	@Column(name="income_account_name")
+	private String incomeAccountName;       // 收入账户 银行账户>招商银行
+
+	// ---------------------------
 	@Column(name="income_category_id")
 	private Long incomeCategoryId;          // 收入分类 ID
 
 	@Column(name="income_category_name")
-	private String incomeCategoryName;          // 收入分类 职业收入>工资收入
+	private String incomeCategoryName;     // 收入分类 职业收入>工资收入
 
 	// ---------------------------
 	@Column(name="income_city_id")
@@ -137,10 +137,10 @@ public class IncomeBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="income_weather_id")
-	private Long incomeWeatherId;      // 天气ID
+	private Long incomeWeatherId;      		// 收入天气ID
 
 	@Column(name="income_weather_name")
-	private String incomeWeatherName;     // 天气中文名
+	private String incomeWeatherName;     	// 收入天气中文名
 
 	// ------ 附加生成信息 ------ //
 	@Column(name="income_country")

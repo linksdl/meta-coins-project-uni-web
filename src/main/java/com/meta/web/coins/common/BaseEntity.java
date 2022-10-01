@@ -46,6 +46,6 @@ public class BaseEntity {
     private String icon;            // 图标
 
     @Column(name="is_deleted", columnDefinition = "bit default 0")
-    private String isDeleted;     // 记录是否被删除
+    private Integer isDeleted;     // 记录是否被删除
 
 }
