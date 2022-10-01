@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 
-@Table(name="pfp_capital_transfer")
+@Table(name="bill_transfer")
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -94,11 +94,11 @@ public class TransferBill extends BaseEntity {
 	private String transferEmotionName; 	// 转账心情中文名
 
 	// ---------------------------
-	@Column(name="transfer_enterprise_id")
-	private Long transferEnterpriseId;      	// （入账户）转账 full family
+	@Column(name="transfer_entity_id")
+	private Long transferEntityId;      	 // （入账户）转账实体ID
 
-	@Column(name="transfer_enterprise_name")
-	private String transferEnterpriseName;       // （入账户）转账 full family
+	@Column(name="transfer_entity_name")
+	private String transferEntityName;       // （入账户）转账实体（公司，个人，主体，账户，第三方等）
 
 	@Column(name="transfer_address")
 	private String transferAddress;           // 转账地址 country>city>area>street

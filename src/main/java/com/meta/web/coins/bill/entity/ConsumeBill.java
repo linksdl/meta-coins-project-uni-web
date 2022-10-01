@@ -13,13 +13,13 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="pfp_capital_consume")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_consume")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class ConsumeBill extends BaseEntity {
 
 	@Id
@@ -84,11 +84,11 @@ public class ConsumeBill extends BaseEntity {
 	private String consumeCategoryName;     // 支出分类 日常支出>午餐
 
 	// ---------------------------
-	@Column(name="consume_enterprise_id")
-	private Long consumeEnterpriseId;      	// 支出公司 full family
+	@Column(name="consume_entity_id")
+	private Long consumeEntityId;      		// 支出实体
 
-	@Column(name="consume_enterprise_name")
-	private String consumeEnterpriseName;   // 支出店家 full family
+	@Column(name="consume_entity_name")
+	private String consumeEntityName;   	// 支出实体（公司，个人，主体，账户，第三方等）
 
 	@Column(name="consume_address")
 	private String consumeAddress;          // 支出地址 country>city>area>street

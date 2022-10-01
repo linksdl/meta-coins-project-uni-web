@@ -98,11 +98,11 @@ public class IncomeBill extends BaseEntity {
 	private String incomeEmotionName; 		// 收入心情中文名
 
 	// ---------------------------
-	@Column(name="income_enterprise_id")
-	private Long incomeEnterpriseId;      // 收入公司 full family
+	@Column(name="income_entity_id")
+	private Long incomeEntityId;      	// 收入实体ID
 
-	@Column(name="income_enterprise_name")
-	private String incomeEnterpriseName;        // 收入公司 full family
+	@Column(name="income_entity_name")
+	private String incomeEntityName;    // 收入实体（公司，个人，主体，账户，第三方等）
 
 	@Column(name="income_address")
 	private String incomeAddress;           // 收入地址 country>city>area>street
