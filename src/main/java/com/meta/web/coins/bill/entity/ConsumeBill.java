@@ -118,8 +118,8 @@ public class ConsumeBill extends BaseEntity {
 	@Column(name="consume_money_id")
 	private Long   consumeMoneyId;          // 支出币种ID
 
-	@Column(name="consume_money_type")
-	private String consumeMoneyType;        // 支出币种 RMB
+	@Column(name="consume_money_name")
+	private String consumeMoneyName;        // 支出币种 RMB
 
 	// ---------------------------
 	@Column(name="consume_weather_id")
