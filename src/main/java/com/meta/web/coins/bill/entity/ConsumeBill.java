@@ -1,6 +1,7 @@
 package com.meta.web.coins.bill.entity;
 
 import com.meta.web.coins.common.BaseEntity;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,55 +13,31 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-//@Table(name="pfp_capital_consume")
-//@Entity
-//@Data
-//@EqualsAndHashCode(callSuper=false)
-//@Builder
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Table(name="pfp_capital_consume")
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ConsumeBill extends BaseEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="consume_id")
-    private Long consumeId;
+    private Long consumeId;					// 支出ID
 
 	@Column(name="consume_name")
-	private String consumeName;
+	private String consumeName;				// 支出名称
 	
 	@Column(name="consume_type")
-	private String consumeType;             // 支出类别 repay还贷 payback还款 lend借出 consume 消费
+	private String consumeType;             // 支出类别 loan-out 还贷 return-out还款 lend借出 consume 消费
 
-	@Column(name="consume_time")
-	private Date consumeTime;               // 支出时间 2019-10-01 12:00:00
+	@Column(name="consume_datetime")
+	private Date consumeDateTime;          	// 支出时间 2019-10-01 12:00:00
 
 	@Column(name="consume_amount", precision = 11, scale = 2)
 	private Double consumeAmount;      		// 支出金额 200.00  <20 20-50-100-200-500-1000-2000-5000-10000-20000-50000
-
-	@Column(name="consume_business")
-	private String consumeBusiness;         // 支出店家 full family
-
-	@Column(name="consume_address")
-	private String consumeAddress;          // 支出地址 country>city>area>street
-
-	@Column(name="consume_money_type")
-	private String consumeMoneyType;        // 支出币种 RMB
-
-	@Column(name="consume_category")
-	private String consumeCategory;         // 支出分类 日常支出>午餐
-
-	@Column(name="consume_member")
-	private String consumeMember;           // 支出人员 本人,耗子
-
-	@Column(name="consume_account")
-	private String consumeAccount;          // 支出账户 现金账户>支付宝
-
-	@Column(name="consume_label")
-	private String consumeLabel;            // 支出标签 日常支出,午餐
-
-
-	// -------------------------------
 
 	@Column(name="consume_imgs")
 	private String consumeImgs;             // 支出图片凭证
@@ -68,20 +45,101 @@ public class ConsumeBill extends BaseEntity {
 	@Column(name="consume_desc")
 	private String consumeDesc;             // 支出描述
 
-	@Column(name="parent_id")               // 父ID
-	private Long  parentId;
+	@Column(name="consume_parent_id")       // 支出父ID
+	private Long  consumeParentId;
 
-	/** 子分类 */
+	@Column(name="consume_parent_name")    	// 支出父名称
+	private String  consumeParentName;
+
+		/** 子分类 */
 	@Transient
     private List<ConsumeBill> children = new ArrayList<ConsumeBill>();
 
-	// -------------------------------
-	
+	// ------ 关联输入信息 ------ //
+	@Column(name="consume_user_id")
+	private Long  consumeUserId;    	  	// 支出用户ID
+
+	@Column(name="consume_user_name")
+	private String consumeUserName;      	// 支出用户名称
+
+	// ---------------------------
+	@Column(name="consume_book_id")
+	private Long consumeBookId;         	// 支出账本Id
+
+	@Column(name="consume_book_name")
+	private String consumeBookName;     	// 支出账本名称
+
+	// ---------------------------
+	@Column(name="consume_account_id")
+	private Long consumeAccountId;          // 支出账户 ID
+
+	@Column(name="consume_account_name")
+	private String consumeAccountName;      // 支出账户 现金账户>支付宝
+
+	// ---------------------------
+	@Column(name="consume_category_id")
+	private Long consumeCategoryId;         // 支出分类 ID
+
+	@Column(name="consume_category_name")
+	private String consumeCategoryName;     // 支出分类 日常支出>午餐
+
+	// ---------------------------
+	@Column(name="consume_enterprise_id")
+	private Long consumeEnterpriseId;      	// 支出公司 full family
+
+	@Column(name="consume_enterprise_name")
+	private String consumeEnterpriseName;   // 支出店家 full family
+
+	@Column(name="consume_address")
+	private String consumeAddress;          // 支出地址 country>city>area>street
+
+	// ---------------------------
+	@Column(name="consume_label_id")
+	private Long consumeLabelId;       	    // 支出标签Id
+
+	@Column(name="consume_label_name")
+	private String consumeLabelName;       	// 支出标签 日常支出,午餐
+
+	// ---------------------------
+	@Column(name="consume_project_id")
+	private Long consumeProjectId;       	// 支出项目ID
+
+	@Column(name="consume_project_name")
+	private String consumeProjectName;   	// 支出项目名称
+
+	// ---------------------------
+	@Column(name="consume_member_id")
+	private Long consumeMemberId;          	// 支出人员ID 本人
+
+	@Column(name="consume_member_name")
+	private String consumeMemberName;       // 支出人员 本人,耗子
+
+	// ---------------------------
+	@Column(name="consume_money_id")
+	private Long   consumeMoneyId;          // 支出币种ID
+
+	@Column(name="consume_money_type")
+	private String consumeMoneyType;        // 支出币种 RMB
+
+	// ---------------------------
+	@Column(name="consume_weather_id")
+	private Long consumeWeatherId;      	// 支出天气ID
+
+	@Column(name="consume_weather_name")
+	private String consumeWeatherName;     	// 支出天气中文名
+
+	// ------ 附加生成信息 ------ //
 	@Column(name="consume_country")
 	private String consumeCountry;          // 支出国家
+
+	@Column(name="consume_province")
+	private String consumeProvince;         // 支出省州
 	
 	@Column(name="consume_city")
 	private String consumeCity;             // 支出城市
+
+	@Column(name="consume_county")
+	private String consumeCounty;          	// 支出市县区
 
 	@Column(name="consume_street")
 	private String consumeStreet;           // 支出街道
