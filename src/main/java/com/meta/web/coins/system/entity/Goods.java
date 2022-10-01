@@ -24,7 +24,7 @@ public class Goods extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="goods_id")
-	private Integer goodsId;      // 商品ID
+	private Long goodsId;      // 商品ID
 
 	@Column(name="goods_type_id")
 	private Long goodsTypeId;   // 商品类型ID

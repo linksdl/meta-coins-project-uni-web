@@ -40,9 +40,12 @@ public class BaseEntity {
     private int weight;             // 权重
 
     @Column(name="enable_status")
-    private Integer enableStatus;      // 是否可用 0 不可用  1可用
+    private Integer enableStatus;   // 是否可用 0 不可用  1可用
 
     @Column(name="icon")
     private String icon;            // 图标
+
+    @Column(name="is_deleted", columnDefinition = "0")
+    private Boolean isDeleted;     // 记录是否被删除
 
 }

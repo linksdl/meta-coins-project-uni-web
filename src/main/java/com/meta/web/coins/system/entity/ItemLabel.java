@@ -9,8 +9,7 @@
 package com.meta.web.coins.system.entity;
 
 import com.meta.web.coins.common.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -23,6 +22,9 @@ import javax.persistence.*;
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ItemLabel extends BaseEntity {
 
 	@Id

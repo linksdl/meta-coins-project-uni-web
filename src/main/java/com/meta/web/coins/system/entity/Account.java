@@ -37,6 +37,9 @@ public class Account extends BaseEntity {
 	@Column(name="account_parent_id")
 	private Long accountParentId;   // 账户父ID
 
+	@Column(name="account_parent_name")
+	private String accountParentName; // 账户父名称
+
 	@Column(name="account_name")
 	private String  accountName;    // 账户名称
 
