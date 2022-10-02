@@ -30,10 +30,10 @@ public class Weather extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="weather_id")
-	private Integer weatherId;   // 天气ID
+	private Integer weatherId;     // 天气ID
 
-	@Column(name="weather_type")
-	private String weatherType;  // 天气类型
+	@Column(name="weather_scope")
+	private String weatherScope;   // 天气功能范围
 
 	@Column(name="weather_cname")
 	private String weatherCname;  // 天气中文名
@@ -42,7 +42,7 @@ public class Weather extends BaseEntity {
 	private String weatherEname;  // 天气英文名
 
 	@Column(name="weather_desc")
-	private String weatherDesc;  // 天气描述
+	private String weatherDesc;   // 天气描述
 
 
 }

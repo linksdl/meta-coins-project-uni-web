@@ -33,14 +33,14 @@ public class Emotion extends BaseEntity {
 	@Column(name="emotion_id")
 	private Integer emotionId;   // 心情ID
 
-	@Column(name="emotion_type")
-	private String emotionType; // 心情类型
-
 	@Column(name="emotion_cname")
 	private String emotionCname; // 心情中文名
 	
 	@Column(name="emotion_ename")
 	private String emotionEname; // 心情英文名
+
+	@Column(name="emotion_scope")
+	private String emotionScope; // 心情作用类型
 
 	@Column(name="emotion_desc")
 	private String emotionDesc;  // 心情描述

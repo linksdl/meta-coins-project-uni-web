@@ -30,13 +30,13 @@ public class Money extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="money_id")
-	private Integer moneyId;        // 币种ID
+	private Long moneyId;        // 币种ID
 
 	@Column(name="money_type_id")
 	private Long moneyTypeId;       // 币种类型ID
 
 	@Column(name="money_type_name")
-	private Long moneyTypeName;    // 币种类型名称
+	private String moneyTypeName;    // 币种类型名称
 
 	@Column(name="money_cname")
 	private String moneyCname;   	// 币种中文名
@@ -58,7 +58,7 @@ public class Money extends BaseEntity {
 
 	// 关联不同用户和用户不同账本
 	@Column(name="user_id")
-	private String  userId;    	  // 用户ID
+	private Long  userId;    	  // 用户ID
 
 	@Column(name="user_name")
 	private String userName;      // 用户名称
@@ -67,6 +67,6 @@ public class Money extends BaseEntity {
 	private Long bookId;         // 账本Id
 
 	@Column(name="book_name")
-	private Long bookName;       // 账本名称
+	private String bookName;       // 账本名称
 	
 }

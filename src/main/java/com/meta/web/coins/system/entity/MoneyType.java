@@ -35,7 +35,8 @@ public class MoneyType extends BaseEntity {
 	
 	@Column(name="money_type_cname")
 	private String moneyTypeCname;
-	
+
+
 	@Column(name="money_type_ename")
 	private String moneyTypeEname;
 

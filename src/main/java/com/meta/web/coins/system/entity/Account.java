@@ -64,7 +64,7 @@ public class Account extends BaseEntity {
 
 	// 关联不同用户和用户不同账本
 	@Column(name="user_id")
-	private String  userId;    	  // 用户ID
+	private Long  userId;    	  // 用户ID
 
 	@Column(name="user_name")
 	private String userName;      // 用户名称
@@ -73,6 +73,6 @@ public class Account extends BaseEntity {
 	private Long bookId;         // 账本Id
 
 	@Column(name="book_name")
-	private Long bookName;       // 账本名称
+	private String bookName;       // 账本名称
 
 }
