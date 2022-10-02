@@ -42,6 +42,7 @@ public class Emotion extends BaseEntity {
 	@Column(name="emotion_scope")
 	private String emotionScope; // 心情作用类型
 
+
 	@Column(name="emotion_desc")
 	private String emotionDesc;  // 心情描述
 

@@ -45,6 +45,7 @@ public class ItemLabel extends BaseEntity {
 	@Column(name="label_scope")
     private String labelScope;   // 作用范围：全部，支出，收入，借入，借出，转账等
 
+
 	// 关联不同用户和用户不同账本
 	@Column(name="user_id")
 	private Long  userId;    	  // 用户ID

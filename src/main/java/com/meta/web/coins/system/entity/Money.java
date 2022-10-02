@@ -66,6 +66,7 @@ public class Money extends BaseEntity {
 	@Column(name="book_id")
 	private Long bookId;         // 账本Id
 
+
 	@Column(name="book_name")
 	private String bookName;       // 账本名称
 	
