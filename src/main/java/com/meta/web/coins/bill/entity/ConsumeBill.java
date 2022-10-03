@@ -1,7 +1,6 @@
-package com.meta.web.coins.consume.entity;
+package com.meta.web.coins.bill.entity;
 
 import com.meta.web.coins.common.BaseEntity;
-import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;

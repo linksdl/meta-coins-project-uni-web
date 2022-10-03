@@ -1,4 +1,4 @@
-package com.meta.web.coins.income.entity;
+package com.meta.web.coins.bill.entity;
 
 import com.meta.web.coins.common.BaseEntity;
 import lombok.*;
