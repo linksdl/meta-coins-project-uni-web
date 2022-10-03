@@ -55,7 +55,7 @@ public class Goods extends BaseEntity {
 	private Long bookId;         // 账本Id
 
 	@Column(name="book_name")
-	private String bookName;       // 账本名称
+	private String bookName;     // 账本名称
 
 
 }

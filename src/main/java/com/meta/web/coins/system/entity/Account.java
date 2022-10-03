@@ -32,28 +32,28 @@ public class Account extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="account_id")
-	private Long accountId;         // 账户ID
+	private Long accountId;           // 账户ID
 
 	@Column(name="account_parent_id")
-	private Long accountParentId;   // 账户父ID
+	private Long accountParentId;     // 账户父ID
 
 	@Column(name="account_parent_name")
 	private String accountParentName; // 账户父名称
 
 	@Column(name="account_name")
-	private String  accountName;    // 账户名称
+	private String  accountName;      // 账户名称
 
 	@Column(name="account_type")
-	private String  accountType;    // 分类类型（支出，收入）
+	private String  accountType;      // 分类类型（支出，收入）
 
 	@Column(name="account_class")
-	private String accountClass;    // 账户分类（正 负）
+	private String accountClass;      // 账户分类（正 负）
 
 	@Column(name="account_desc")
-	private String  accountDesc;    // 账户描述
+	private String  accountDesc;      // 账户描述
 
 	@Column(name="account_scope")
-    private String accountScope;    // 作用范围：全部，支出，收入，借入，借出，转账等
+    private String accountScope;       // 作用范围：全部，支出，收入，借入，借出，转账等
 
 	@Column(name="account_level")
 	private String  accountLevel;   // 账户层次
