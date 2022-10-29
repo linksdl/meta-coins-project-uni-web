@@ -12,13 +12,13 @@ import java.util.List;
  * 资金(账单)流水（收入，支出，借贷，转账，余额，投资等）
  *
  */
-@Table(name="bill_flow")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_flow")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class FlowBill extends BaseEntity {
 
 
@@ -88,14 +88,14 @@ public class FlowBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="flow_account_id")
-	private Long flowAccountId;           // 流水账户 ID
+	private String flowAccountId;           // 流水账户 ID
 
 	@Column(name="flow_account_name")
 	private String flowAccountName;       // 流水账户 银行账户>招商银行
 
 	// ---------------------------
 	@Column(name="flow_category_id")
-	private Long flowCategoryId;          // 流水分类 ID
+	private String flowCategoryId;          // 流水分类 ID
 
 	@Column(name="flow_category_name")
 	private String flowCategoryName;     // 流水分类 职业流水>工资流水
@@ -126,7 +126,7 @@ public class FlowBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="flow_label_id")
-	private Long flowLabelId;       	    // 流水标签Id
+	private String flowLabelId;       	    // 流水标签Id
 
 	@Column(name="flow_label_name")
 	private String flowLabelName;         // 流水标签 工资流水

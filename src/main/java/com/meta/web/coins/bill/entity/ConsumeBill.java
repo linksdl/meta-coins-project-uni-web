@@ -13,13 +13,13 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年8月18日
  */
-@Table(name="bill_consume")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_consume")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class ConsumeBill extends BaseEntity {
 
 	@Id
@@ -71,17 +71,31 @@ public class ConsumeBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="consume_account_id")
-	private Long consumeAccountId;          // 支出账户 ID
+	private String consumeAccountId;          // 支出账户 ID
 
 	@Column(name="consume_account_name")
 	private String consumeAccountName;      // 支出账户 现金账户>支付宝
 
 	// ---------------------------
 	@Column(name="consume_category_id")
-	private Long consumeCategoryId;         // 支出分类 ID
+	private String consumeCategoryId;         // 支出分类 ID
 
 	@Column(name="consume_category_name")
 	private String consumeCategoryName;     // 支出分类 日常支出>午餐
+
+	// ---------------------------
+	@Column(name="consume_city_id")
+	private Long consumeCityId;      	    // 支出城市ID
+
+	@Column(name="consume_city_name")
+	private String consumeCityName;   	    // 支出城市中文名
+
+	// ---------------------------
+	@Column(name="consume_emotion_id")
+	private Long consumeEmotionId;   		// 支出心情ID
+
+	@Column(name="consume_emotion_name")
+	private String consumeEmotionName; 		// 支出心情中文名
 
 	// ---------------------------
 	@Column(name="consume_entity_id")
@@ -95,7 +109,7 @@ public class ConsumeBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="consume_label_id")
-	private Long consumeLabelId;       	    // 支出标签Id
+	private String consumeLabelId;       	    // 支出标签Id
 
 	@Column(name="consume_label_name")
 	private String consumeLabelName;       	// 支出标签 日常支出,午餐

@@ -13,13 +13,13 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年10月28日
  */
-@Table(name="bill_debt")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_debt")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class DebtBill extends BaseEntity {
 
 	@Id
@@ -71,14 +71,14 @@ public class DebtBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="debt_account_id")
-	private Long debtAccountId;           // 借贷账户 ID
+	private String debtAccountId;           // 借贷账户 ID
 
 	@Column(name="debt_account_name")
 	private String debtAccountName;       // 借贷账户 银行账户>招商银行
 
 	// ---------------------------
 	@Column(name="debt_category_id")
-	private Long debtCategoryId;          // 借贷分类 ID
+	private String debtCategoryId;          // 借贷分类 ID
 
 	@Column(name="debt_category_name")
 	private String debtCategoryName;     // 借贷分类 职业借贷>工资借贷
@@ -109,7 +109,7 @@ public class DebtBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="debt_label_id")
-	private Long debtLabelId;       	    // 借贷标签Id
+	private String debtLabelId;       	    // 借贷标签Id
 
 	@Column(name="debt_label_name")
 	private String debtLabelName;         // 借贷标签 工资借贷

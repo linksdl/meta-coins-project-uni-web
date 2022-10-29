@@ -13,13 +13,13 @@ import java.util.List;
  * @author shengdaolin_sh
  * @date 2019年10月28日
  */
-@Table(name="bill_income")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_income")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class IncomeBill extends BaseEntity {
 
 	@Id
@@ -71,14 +71,14 @@ public class IncomeBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="income_account_id")
-	private Long incomeAccountId;           // 收入账户 ID
+	private String incomeAccountId;           // 收入账户 ID
 
 	@Column(name="income_account_name")
 	private String incomeAccountName;       // 收入账户 银行账户>招商银行
 
 	// ---------------------------
 	@Column(name="income_category_id")
-	private Long incomeCategoryId;          // 收入分类 ID
+	private String incomeCategoryId;          // 收入分类 ID
 
 	@Column(name="income_category_name")
 	private String incomeCategoryName;     // 收入分类 职业收入>工资收入
@@ -109,7 +109,7 @@ public class IncomeBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="income_label_id")
-	private Long incomeLabelId;       	    // 收入标签Id
+	private String incomeLabelId;       	    // 收入标签Id
 
 	@Column(name="income_label_name")
 	private String incomeLabelName;         // 收入标签 工资收入

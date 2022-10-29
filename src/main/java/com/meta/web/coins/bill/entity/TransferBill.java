@@ -9,13 +9,13 @@ import java.util.Date;
 import java.util.List;
 
 
-@Table(name="bill_transfer")
-@Entity
-@Data
-@EqualsAndHashCode(callSuper=false)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Table(name="bill_transfer")
+//@Entity
+//@Data
+//@EqualsAndHashCode(callSuper=false)
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class TransferBill extends BaseEntity {
 
 	@Id
@@ -67,14 +67,14 @@ public class TransferBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="transfer_account_id")
-	private Long transferAccountId;           // （出账户）转账账户 ID
+	private String transferAccountId;           // （出账户）转账账户 ID
 
 	@Column(name="transfer_account_name")
 	private String transferAccountName;       // （出账户）转账账户 银行账户>招商银行
 
 	// ---------------------------
 	@Column(name="transfer_category_id")
-	private Long transferCategoryId;          // 转账分类 ID
+	private String transferCategoryId;          // 转账分类 ID
 
 	@Column(name="transfer_category_name")
 	private String transferCategoryName;      // 转账分类 职业转账>工资转账
@@ -95,7 +95,7 @@ public class TransferBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="transfer_entity_id")
-	private Long transferEntityId;      	 // （入账户）转账实体ID
+	private String transferEntityId;      	 // （入账户）转账实体ID
 
 	@Column(name="transfer_entity_name")
 	private String transferEntityName;       // （入账户）转账实体（公司，个人，主体，账户，第三方等）
@@ -105,7 +105,7 @@ public class TransferBill extends BaseEntity {
 
 	// ---------------------------
 	@Column(name="transfer_label_id")
-	private Long transferLabelId;       	  // 转账标签Id
+	private String transferLabelId;       	  // 转账标签Id
 
 	@Column(name="transfer_label_name")
 	private String transferLabelName;         // 转账标签 工资转账
